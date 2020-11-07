@@ -54,10 +54,14 @@ module.exports = (sequelize, DataTypes) => {
     await bcrypt.hash(pendingUser.password, 10)
     .then(hashedPassword=>{
       console.log(`${pendingUser.password} became ---> ${hashedPassword}`)
-      //replace the original password with the hash
       pendingUser.password = hashedPassword
     })
   })
+  user.prototype.validPassword = async function (passwordInput) {
+    let match = await bcrypt.compare(passwordInput, this.password)
+    console.log("???????? match:", match)
+    return match
+  }
   return user;
 };
 

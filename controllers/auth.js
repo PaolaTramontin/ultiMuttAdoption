@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../models') //go back 2 levels to my root folder an then find models
-
+const passport = require('../config/ppConfig')
 
 //remove the / from any ejs file when you render
 
@@ -17,22 +17,29 @@ router.get('/signup', (req, res)=>{
 //this will take the stored infro from the form and will store it in req.body and then redirect
 router.post('/signup', (req, res)=>{
     console.log('sign up form user input:', req.body)
-    //if it does, throw an error message
-    //otherwise create a new user and store them into the db
-    db.user.findOrCreate({        //if the email doesnt match then, they prb dont have an acct so the default will create a new one
+    // if it does, throw an error message
+    // otherwise create a new user and store them in the db
+    db.user.findOrCreate({ // check if that email is already in db
         where: {email: req.body.email},
         defaults: {name: req.body.name, password: req.body.password}
-    }) //create new user if email wasnt found
+    }) // create new user if email wasn't found
     .then(([createdUser, wasCreated])=>{
         if(wasCreated){
-            console.log('Just created the following user:', createdUser)
+            console.log(`just created the following user:`, createdUser)
+            // log the new user in
+            passport.authenticate('local', {
+                successRedirect: '/',
+                successFlash: 'Account created and logged in!'  // !-> FLASH <-!
+            })(req, res) // IIFE = immediately invoked function
         } else {
-            console.log('An account associated with that email already exists! TRY LOGGING IN AGAIN ')
+            req.flash('error', 'email already exists, try logging in')  // !-> FLASH <-!
+            res.redirect('/auth/login') // redirect to login page
+            // console.log('An account associated with that email address already exists! Try loggin in.')
         }
-        res.redirect('/auth/login')
     })
     .catch(err=>{
-        console.log('did not post to database. See error', err)
+        req.flash('error', err.message)  // !-> FLASH <-!
+        res.redirect('/auth/signup') // redirect to signup page so they can try again
     })
 })
 
@@ -43,8 +50,19 @@ router.get('/login', (req, res)=>{
 })
 
 
-router.post('/login', (req, res)=>{
-    console.log('trying ti log in with this input:', req.body)
+router.post('/login', passport.authenticate('local', {
+    failureRedirect: '/auth/login',
+    successRedirect: '/',
+    failureFlash: 'Invalid email or password!', // !-> FLASH <-!
+    successFlash: 'You are now logged in!' // !-> FLASH <-!
+}))
+
+
+
+//get the user to logout
+router.get('/logout', (req, res)=>{
+    req.logout()
+    req.flash('success', 'Sucessfully Logged Out')
     res.redirect('/')
 })
 

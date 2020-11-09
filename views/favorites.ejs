@@ -1,0 +1,12 @@
+<h1> Favorited Pets</h1>
+
+<% animal.forEach(function(animal) { %>
+<hr />
+    <div class="well">
+     <p>Name: <%= animal.PetName %> <br> Status: <%= animal.Status %> <br>Contact: <%= animal.Contact %> <br>Mention My Reference Id Number <%= animal.ReferenceId %> </p> 
+         <p> <img src="<%=animal.Photo%>"<% alt="no img" %> %> </p> 
+         <p> <%= animal.Description %>   </p> 
+<% }) %>
+    </div>
+
+<a href="/animals">&larr; Return to View All Animals</a>

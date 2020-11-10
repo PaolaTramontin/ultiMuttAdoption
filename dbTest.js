@@ -8,10 +8,10 @@ const pet = require('./models/pet')
 
 
 //FIND ALL FAV PETS  ...this is my "toy"
-//  db.pet.findAll()
-//     .then(pets=>{
-//         console.log(pets);
-//     });
+ db.userpet.findAll()
+    .then(pets=>{
+        console.log(pets);
+    });
 
 
 //FIND ALL USERS    ..this is my "pet"
@@ -20,19 +20,6 @@ const pet = require('./models/pet')
 //         console.log(users);
 //     });
 
-
-
-//this shows me all users ass. with a pet
-db.pet.findByPk(5)
-.then(foundPet=>{
-    foundPet.getUsers()
-    .then(foundUsers=>{
-        console.log(`${foundUsers.length} user(s) love the ${foundPet.PetName}`)
-    })
-})
-.catch(err=>{
-    console.log(err)
-})
 
 
 
@@ -60,3 +47,52 @@ db.pet.findByPk(5)
 
 
 
+//remove a pet from favorites:
+
+// db.pet.destroy({
+//     where: {PetName:'Verdi'}
+// })
+// .then(numRowsDeleted=>{
+//     console.log(numRowsDeleted)
+// })
+
+
+//this shows me all users ass. with a pet
+// db.pet.findByPk(2)
+// .then(foundPet=>{
+//     foundPet.getUsers()
+//     .then(foundUsers=>{
+//         console.log(`${foundUsers.length} user(s) love the ${foundPet.PetName}`)
+//     })
+// })
+// .catch(err=>{
+//     console.log(err)
+// })
+
+
+//find how many fav pets an user has 
+// db.user.findByPk(2)
+// .then(foundUser=>{
+//     foundUser.getPets()
+//     .then(foundPets=>{
+//         console.log(`${foundPets.length} pet(s) love the ${foundUser.name}`)
+//     })
+// })
+// .catch(err=>{
+//     console.log(err)
+// })
+
+
+
+//UPDATE AN EXISTING USER
+// db.userpet.update({
+//     comment: req.body.comment
+// },
+// {
+//     where:{
+//         petId:'Fatima'
+//     }
+// }).then(numRowsChanged=>{
+//     console.log(numRowsChanged)
+// })
+//TEST BY DOING node index.js

@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express Auth</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <title>The ultiMutt Adoption</title>
 </head>
 <body>
     <header>
-        <h1>Express Auth</h1>
+        <h1>The ultiMutt Adoption</h1>
         <nav> 
-            <ul> 
+            <ul class="logins"> 
                 <% if (!currentUser) {%>
                     <li> <a href="/auth/signup"> Sign Up</a></li>
                     <li> <a href="/auth/login"> Log In</a></li>
@@ -17,6 +18,9 @@
                      <li> <a href="/auth/logout"> Log Out</a></li>
                      <li> <a href="/profile"> Profile</a></li>
                     <%  } %>
+
+                    <form method="GET" action="/auth/signup">
+                        <button class="btn btn-primary" id="button" type="submit">Sign Up</button>
             </ul>
         </nav>
     </header>

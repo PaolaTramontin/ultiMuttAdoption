@@ -57,8 +57,8 @@ router.delete('/:id', (req, res)=>{
 
 //EDIT COMMENT ROUTE
 router.put('/:id', (req, res)=> {
-  console.log('@@@@@@@', req.params)
-  console.log('@@@@@@@', req.user.id)
+  // console.log('@@@@@@@', req.params)
+  // console.log('@@@@@@@', req.user.id)
   db.userpet.update(
     {comment: req.body.comment},
     {where: {userId: req.user.id, petId:req.params.id }

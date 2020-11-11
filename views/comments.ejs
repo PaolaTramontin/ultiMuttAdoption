@@ -1,6 +1,12 @@
-<h1> Notes</h1>
+<h1 id="notes"> Notes: </h1>
 
-<%= comment.comment %>
+<div id="comment"> 
+   <p id="showComment"> <%= comment.comment %> </p> 
+<br> 
+  <b>  Note Created: </b>  <%= comment.createdAt %>
+<br> 
+<b>  Last Update: </b> <%= comment.updatedAt %>
 
-<br>
+</div>
+
 <a href="/favorites">&larr; Return to View All Animals</a>

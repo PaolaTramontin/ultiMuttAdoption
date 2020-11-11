@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('../models');
 const router = express.Router();
 const axios = require('axios'); 
-const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsak1WdWFCb1JNdlowTG1jY0xac2RrMDdmcVRTWE5OTXNUWG9NVUpJMkJHSmhuMEpHYiIsImp0aSI6IjZlNjk4ZDRiZjI1MWEyNDVjZWIzZDMxODQzMmUxN2ZjNjY2ZmUzZDExMTQ5YTA0MmY3YzExODQyMDFmM2VlZWYyZTk5NDlmNGVkMzZiMDgxIiwiaWF0IjoxNjA1MTE1OTg3LCJuYmYiOjE2MDUxMTU5ODcsImV4cCI6MTYwNTExOTU4Nywic3ViIjoiIiwic2NvcGVzIjpbXX0.P1K14E2CcHSJZOaQKfRnj8mo5hucgM3lZnO0-ThthnLOTqzam6US_367UO1XhpLZxklunrx4bVA0l-sGeuyF2o4OhO57OE8q4NY2FT7rb5kVGioeAfvPVgpxPIFIPwa0SbWJWT2A587c-I2N53baAf6kzNwuVPlZnRqKXBR5yeBr5voAqJZn0_2dLfsYfRqMKgc8bI-onwB2WaelIBgFLedL6056dfRqOGclptkonTb1QfN_r2o7LMsEzL6OhGFV4uPmmZubvLCpycAP-EbqhPOk2sKYV6jWc8A4c_ZWxPia3Ozw4-ZBEaDzmeGsDe9krSWPAPtovshc3A7VKwFSxg"
+const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsak1WdWFCb1JNdlowTG1jY0xac2RrMDdmcVRTWE5OTXNUWG9NVUpJMkJHSmhuMEpHYiIsImp0aSI6ImY3Yzg3YmFiNDU2NjgyNWI3MjZhZWI4ZmExNGU5OTU4ODIwMDM2MzFhZjFlMTA1NjNmNDNiYzJjYmE0MDZlNDJkY2VkNGIzZDRmOTMzNDY5IiwiaWF0IjoxNjA1MTI4MDU3LCJuYmYiOjE2MDUxMjgwNTcsImV4cCI6MTYwNTEzMTY1Nywic3ViIjoiIiwic2NvcGVzIjpbXX0.wxfsR1JUWLUop5ZgDCbEovjOqVqdRSKEYUKJ8-ZF6qYgX0p128wznOFqcYYu5gM2xPS3j7xNJogUVf9W925Cho6V6tcwQlihxHyxbd8ufqu7mleF_-0edUswsyCWE85hO_9Y19zy8op6g2eue5I7yJIF_1GDKjYfgXRraVSN0lbPq1LsQjADEXZ0OX4j8ZfUWTUXYmE_B-g7KK7aXvmz2DG7NDnrGmIPrZzkrTvTUEMudfpVR73ECMoEF-QIZ6pAsAn9kjIhDQ9yQ1fNCvusKpAgR8BzU4-R9XFM57-BZ2no9j9Rn8xEYkV-AdGAzCRBimdOAevArf2AKlFOiMMDNA"
 ;
 
 //HOME ROUTE WITH ALL Pets
@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
         }
     })
     .then((response)=>{
-       // res.send(response.data)
+        //res.send(response.data)
        const allPets = response.data
        console.log(allPets)
       res.render('animals', {allPets: response.data })

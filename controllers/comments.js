@@ -12,7 +12,7 @@ router.get('/:petId', (req, res)=> {
       where: {userId: req.user.id, petId:req.params.petId},
     })
     .then(foundComment=>{
-        console.log('THIS IS THE COMMENT', foundComment)
+        console.log('THIS IS THE COMMENT', foundComment) //this returned an object
         res.render('comments', {comment: foundComment.dataValues})
     })
   });

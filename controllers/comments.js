@@ -7,13 +7,13 @@ const axios = require('axios');
 
 
 //SHOW ME ALL THE COMMENTS ABOUT THAT PET
-router.get('/', (req, res)=> {
+router.get('/:petId', (req, res)=> {
     db.userpet.findOne({
-      where: {id: req.user.id},
+      where: {userId: req.user.id, petId:req.params.petId},
     })
     .then(foundComment=>{
-        console.log('THIS IS THE COMMENT', foundComment.dataValues.comment)
-        res.render('comments', {commentList: foundComment.dataValues})
+        console.log('THIS IS THE COMMENT', foundComment)
+        res.render('comments', {comment: foundComment.dataValues})
     })
   });
   

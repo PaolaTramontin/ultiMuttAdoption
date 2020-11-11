@@ -8,23 +8,27 @@
 </head>
 <body>
     <header>
-        <h1>The ultiMutt Adoption</h1>
-        <nav> 
-            <ul class="logins"> 
-                <% if (!currentUser) {%>
-                    <li> <a href="/auth/signup"> Sign Up</a></li>
-                    <li> <a href="/auth/login"> Log In</a></li>
-                <% } else {  %>
-                     <li> <a href="/auth/logout"> Log Out</a></li>
-                     <li> <a href="/profile"> Profile</a></li>
-                    <%  } %>
-
-                    <form method="GET" action="/auth/signup">
-                        <button class="btn btn-primary" id="button" type="submit">Sign Up</button>
-            </ul>
-        </nav>
+        <div id="sign"> 
+            <% if (!currentUser) {%>
+                <a href="/auth/signup"> Sign Up</a>
+        </div>         
+        <div id="login"> 
+            <a href="/auth/login"> Log In</a>
+        </div>
+            <% } else {  %>
+            <a href="/auth/logout"> Log Out</a>
+            <a href="/profile"> Profile</a>
+            <%  } %>
     </header>
+    <div id="title"> The ultiMutt Adoption</div>
+    <br>
+    <p><em> Find Your Best Friend Today </em></p>
+    <nav> 
+            <div id="main"> 
+        </div>
+        </nav>
     <%-include('partials/alerts.ejs')%>
     <%- body %>
+
 </body>
 </html>

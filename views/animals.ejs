@@ -10,9 +10,7 @@
          <%if(a.primary_photo_cropped){ %>
                 <p> <img src="<%=a.primary_photo_cropped.medium%>"<% alt="no img" %> width="300" </p>
         <% } %> 
-        <%if(a.photos){ %>
-            <p> <img src="<%=a.photos.small%>"<% alt="no img" %> </p>
-        <% } %>
+       
          <form method="POST" action="/favorites">
             <input hidden type="text" name="name" value="<%= a.name %>">
             <input hidden type="text" name="id" value="<%= a.id %>">

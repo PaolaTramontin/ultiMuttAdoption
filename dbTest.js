@@ -8,10 +8,10 @@ const pet = require('./models/pet')
 
 
 //FIND ALL FAV PETS  ...this is my "toy"
- db.userpet.findAll()
-    .then(pets=>{
-        console.log(pets);
-    });
+//  db.userpet.findAll()
+//     .then(pets=>{
+//         console.log(pets);
+//     });
 
 
 //FIND ALL USERS    ..this is my "pet"
@@ -96,3 +96,28 @@ const pet = require('./models/pet')
 //     console.log(numRowsChanged)
 // })
 //TEST BY DOING node index.js
+
+
+
+
+// db.pet.findByPk(27)
+// .then(foundPet=>{
+//     foundPet.getComments()
+//     .then(foundComments=>{
+//         console.log(`${foundComments.length} comments  blonging to ${foundPet.PetName}`)
+//     })
+// })
+// .catch(err=>{
+//     console.log(err)
+// })
+
+// db.toy.findByPk(1)
+// .then(foundToy=>{
+//     foundToy.getPets()
+//     .then(foundPets=>{
+//         console.log(`${foundPets.length} pets(s) love the ${foundToy.color} ${foundToy.type}`)
+//     })
+// })
+// .catch(err=>{
+//     console.log(err)
+// })

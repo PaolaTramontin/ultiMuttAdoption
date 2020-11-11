@@ -1,4 +1,4 @@
-body {  /* INFO ABOUT THE BODY & BACKGROUND IMG */
+body{  /* INFO ABOUT THE BODY & BACKGROUND IMG */
     background-image: url('https://newevolutiondesigns.com/images/freebies/dog-wallpaper-49.jpg');
     background-repeat: no-repeat;
     background-color:black;
@@ -9,12 +9,86 @@ body {  /* INFO ABOUT THE BODY & BACKGROUND IMG */
     justify-content: space-between;
     align-items: center;
     width:100vw;
-    font-family: Marker Felt, fantasy;
+}
+
+
+
+header{
+    background-color:black;
+    height:120px;
+    width: 100%;
+    align-items: center;
+    color:white;
+    font-size:20px;
+}
+
+#sign{
+    color:white;
+    padding-right: 0px;
+    text-align: right;
+    color:white;
     font-size:25px;
-  } 
+}
+
+#login{
+    font-size:30px;
+    text-align: right;
+}
+
+#title{
+    color:black; 
+    font-size: 70px;
+}
+
+a{
+    color:white;
+    font-family:Gill Sans, sans-serif;
+}
 
 
-  .logins{
-      color:red;
-  }
+/* footer{
+    border:2px solid white;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color:white;
+    background-color:black;
+} */
 
+
+#allPets{
+    color:black;
+}
+
+img{
+    background-color:white;
+    border:5px solid white;
+    align-self: center;
+}
+
+.details{
+    justify-content: center;
+    background-color: rgba(238, 237, 238, 0.334);
+    border:3px solid gray;
+    align-items: center;
+    text-align:center;
+}
+
+
+#fav{
+    color:white;
+    background-color:black;
+    align-items: center;
+    text-align:center;
+    font-size:50px;
+}
+
+.well{
+    align-items: center;
+    text-align:center;
+    border:3px solid black;
+    background-color: rgba(19, 18, 19, 0.79);
+    color:white;
+}

@@ -57,12 +57,14 @@ router.delete('/:id', (req, res)=>{
 
 //EDIT COMMENT ROUTE
 router.put('/:id', (req, res)=> {
+  console.log('@@@@@@@', req.params)
+  console.log('@@@@@@@', req.user.id)
   db.userpet.update(
     {comment: req.body.comment},
-    {where: {id: req.user.id}
+    {where: {userId: req.user.id, petId:req.params.id }
   }).then(newComment=>{
     console.log(newComment)
-    res.redirect('/comments')
+    res.redirect(`/comments/${req.params.id}`)
   })
 })
 

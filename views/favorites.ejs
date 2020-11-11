@@ -1,4 +1,4 @@
-<h1> Favorited Pets</h1>
+<h1 id="fav"> Favorited Pets </h1>
 
 <% favAnimalList.forEach(function(animal) { %>
 <hr />
@@ -15,10 +15,10 @@
             <br>
             <button class="btn btn-primary" id="button" type="submit">Submit</button>
         </form>
-        <form method="GET" action="/comments">
+        <form method="GET" action="/comments/<%=animal.id%>">
             <button class="btn btn-primary" id="button" type="submit">View Note About this Pet</button>
         </form>
-
+      
 
 <% }) %>
     </div>

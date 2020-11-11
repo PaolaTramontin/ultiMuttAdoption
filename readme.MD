@@ -1,4 +1,4 @@
-EXPRESS AUTH. BOILERPLATE
+# EXPRESS AUTH. BOILERPLATE
 
 1. create a note app
     git init

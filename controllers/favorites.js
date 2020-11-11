@@ -13,13 +13,13 @@ router.post('/', (req, res)=>{
       include: [db.user],
     })
     .then(([foundOrCreatedPet, created])=>{
-      console.log('found or created user:', foundOrCreatedPet)
-      console.log('already excited in db?', !created)
-      console.log(req.user)
+      // console.log('found or created user:', foundOrCreatedPet)
+      // console.log('already excited in db?', !created)
+      // console.log(req.user)
       foundOrCreatedPet.addUser(req.user)
     .then(createdRelation=>{
-      console.log("createdRelation:", createdRelation)
-      console.log(`${req.user} added to ${foundOrCreatedPet.PetName}`)
+      // console.log("createdRelation:", createdRelation)
+      // console.log(`${req.user} added to ${foundOrCreatedPet.PetName}`)
       res.redirect('/favorites')
     })
     })

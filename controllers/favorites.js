@@ -63,23 +63,39 @@ router.put('/:id', (req, res)=> {
     {comment: req.body.comment},
     {where: {userId: req.user.id, petId:req.params.id }
   }).then(newComment=>{
-    console.log(newComment)
+    console.log("this is my comment", newComment)
     res.redirect(`/comments/${req.params.id}`)
   })
 })
 
 
-// //SHOW ME ALL THE COMMENTS ABOUT THAT PET
-// router.get('/', (req, res)=> {
-//   db.user.findOne({
-//     where: {id: req.user.id},
-//     include:[db.pet]
-//   })
-//   .then(foundUser=>{
-//    // console.log(foundUser.pets)
-//    res.render('favorites', {favAnimalList: foundUser.pets})
-//   })
-// });
+
+
+
+
+
+//EDIT COMMENT ROUTE to show on the fav page, broken
+// router.put('/:id', (req, res)=> {
+//   db.userpet.update(
+//     {comment: req.body.comment},
+//     {where: {userId: req.user.id, petId:req.params.id},
+//     include: [db.pet]
+//   }).then(([foundComment, created])=>{
+//       foundComment.addPet(req.params.id)
+//     .then(createdRelation=>{
+//        console.log("createdRelation:", createdRelation)
+//        res.redirect('/favorites')
+//     })
+//     })
+// })
+
+
+
+
+
+
+
+
 
 
 

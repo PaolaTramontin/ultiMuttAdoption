@@ -1,24 +1,27 @@
 <h1 id="fav"> Your Favorite Pets </h1>
 
 <% favAnimalList.forEach(function(animal) { %>
+
+
 <hr />
     <div class="well">
         <p>Name: <%= animal.PetName %> <br> Status: <%= animal.Status %> <br>Contact: <%= animal.Contact %> <br>Mention My Reference Id Number <%= animal.ReferenceId %> </p> 
         <p> <img src="<%=animal.Photo%>"<% alt="no img" %> %> </p> 
         <p> <%= animal.Description %>   </p> 
-        <form method="POST" action="/favorites/<%=animal.id%>/?_method=DELETE">
-            <input id="delete" type="submit" value="Remove From Favorites">
-         </form>
-         <form method="POST" action="/favorites/<%=animal.id%>/?_method=PUT">
+        <form method="POST" action="/favorites/<%=animal.id%>/?_method=PUT">
             <label for="comment">Write a Note</label>
             <textarea id="comment" type="text" name="comment" > I Love this Pet</textarea>
             <!-- <input id="commentArea" type="text" name="comment">  -->
             <br>
-            <button class="btn btn-primary" id="button" type="submit">Submit</button>
+            <button class="btn-primary" id="button" type="submit">Submit</button>
         </form>
         <form method="GET" action="/comments/<%=animal.id%>">
-            <button class="btn btn-primary" id="button" type="submit">View Note About this Pet</button>
+            <button class="btn-primary" id="button" type="submit">View Note About this Pet</button>
         </form>
+
+        <form method="POST" action="/favorites/<%=animal.id%>/?_method=DELETE">
+            <input id="delete" type="submit" value="Remove From Favorites">
+         </form>
       
 
 <% }) %>

@@ -5,16 +5,21 @@
 
 <hr />
     <div class="well">
-        <p>Name: <%= animal.PetName %> <br> Status: <%= animal.Status %> <br>Contact: <%= animal.Contact %> <br>Mention My Reference Id Number <%= animal.ReferenceId %> </p> 
-        <p> <img src="<%=animal.Photo%>"<% alt="no img" %> %> </p> 
-        <p> <%= animal.Description %>   </p> 
+        <p>Name: <%= animal.PetName %> <br> Status: <%= animal.Status %> <br>Contact: <%= animal.Contact %> <br> Location: <%= animal.Location %>  <br>Mention My Reference Id Number <%= animal.ReferenceId %> </p>   
+       
+        <p> <img src="<%=animal.Photo%>"<% alt="no img" %>> </p> 
+        <p id="description"> <%= animal.Description %>   </p> 
+
+
         <form method="POST" action="/favorites/<%=animal.id%>/?_method=PUT">
-            <label for="comment">Write a Note</label>
+            <label for="comment">WRITE A NOTE</label>
             <textarea id="comment" type="text" name="comment" > I Love this Pet</textarea>
             <!-- <input id="commentArea" type="text" name="comment">  -->
             <br>
             <button class="btn-primary" id="button" type="submit">Submit</button>
         </form>
+
+        
         <form method="GET" action="/comments/<%=animal.id%>">
             <button class="btn-primary" id="button" type="submit">View Note About this Pet</button>
         </form>

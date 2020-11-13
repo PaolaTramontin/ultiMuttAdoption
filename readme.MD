@@ -32,21 +32,42 @@ Website Used: lucidapp.com
 
 Website Used: drawio-app.com
 
-###EXPRESS AUTH. BOILERPLATE
 
-1. Create a note app
-    git init
-    run npm i   (this will install the dependencies)
-2. .gitignore
-    create a file called .gitignore 
-    add: node_moules
-3. install and set up express 
-    npm i express  
-    create a index.js file
-    inside index.js write: const express require('express)
-    const app = express()
-4. stubbed and get AUTH/LOGIN, get auth/signup, post  auth/login, POST auth/signup
-5. configured autho controller
-6. set up ejs, express ejs layouts, verfifid that its working:
-        npm i ejs  & npm i express-ejs-layouts
-7. set up the signup and login forms, tested post routes
+* User Model and Pet Model have a many to many relationship. A join table was created for association. UserPet model has userId (primary key), petId (primary key), it's own id (automatically generated) and a comment column.
+
+
+### Technologies Used:
+
+* Node/Express & Axios
+* Passport/ Bcrypt for authentification and password hashing.
+* Postgres
+* Sequelize
+* CSS, HTML & JavaScript
+
+
+### Routes and Models
+
+
+<img width="807" alt="crud" src="https://user-images.githubusercontent.com/69879822/99105425-832a6e80-25b0-11eb-89a4-c06e41ea63e3.png">
+
+
+
+###Steps to Setting Up
+
+1. Fork and Clone this Repo.
+2. Run npm i   (this will install the dependencies)
+3. Write this code in terminal to get a new key/token as they expire every hour:
+* curl -d "grant_type=client_credentials&client_id=ljMVuaBoRMvZ0LmccLZsdk07fqTSXNNMsTXoMUJI2BGJhn0JGb&client_secret=rDLvLhzH0Yl6qt8VXvj266OqsSyjPC44NZVlOALV" https://api.petfinder.com/v2/oauth2/token
+
+* The terminal will respond with a token. Copy the token and paste it inside the token variable in index.js and animal controller.
+4. Run nodemon
+5. Setup your database and models, see table below:
+
+<img width="820" alt="Screen Shot 2020-11-13 at 1 45 18 PM" src="https://user-images.githubusercontent.com/69879822/99109351-b1ab4800-25b6-11eb-993b-6ded6bafd3e0.png">
+
+6. Run the following code to migrate:
+    * sequelize db:migrate
+
+7. Create a .env file, this will keep your port and session_secret private.
+  * SESSION_SECRET (you choose this)
+  * PORT= (choose the local host port you want)     

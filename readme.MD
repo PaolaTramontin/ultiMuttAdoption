@@ -2,8 +2,9 @@
 ## The UltiMutt Adoption
 
 
-Are you looking to expand your family? Do you need a new BFF? If so, the UltiMutt Adoption App. is for you. The UltiMutt Adoption is a database with over 100+ dogs that are available for adoption in the State of Massachusets.
-Sign up to easily track your new bff and access their current location, contact information, short description and photo! 
+*Are you looking to expand your family? Do you need a new BFF? 
+**If so, the UltiMutt Adoption App. is for you.** The UltiMutt Adoption is a database with over 100+ dogs that are available for adoption in the State of Massachusets.
+Sign up to easily track your new bff and access their current location, contact information, short description and photo!* 
 
 
 <img width="1210" alt="project2LogIn" src="https://user-images.githubusercontent.com/69879822/98846834-83decb80-241d-11eb-83d7-307399a08b50.png">
@@ -57,9 +58,9 @@ Website Used: drawio-app.com
 1. Fork and Clone this Repo.
 2. Run npm i   (this will install the dependencies)
 3. Write this code in terminal to get a new key/token as they expire every hour:
-* curl -d "grant_type=client_credentials&client_id=ljMVuaBoRMvZ0LmccLZsdk07fqTSXNNMsTXoMUJI2BGJhn0JGb&client_secret=rDLvLhzH0Yl6qt8VXvj266OqsSyjPC44NZVlOALV" https://api.petfinder.com/v2/oauth2/token
+    * curl -d "grant_type=client_credentials&client_id=ljMVuaBoRMvZ0LmccLZsdk07fqTSXNNMsTXoMUJI2BGJhn0JGb&client_secret=rDLvLhzH0Yl6qt8VXvj266OqsSyjPC44NZVlOALV" https://api.petfinder.com/v2/oauth2/token
 
-* The terminal will respond with a token. Copy the token and paste it inside the token variable in index.js and animal controller.
+        * The terminal will respond with a token. Copy the token and paste it inside the token variable in index.js and animal controller.
 4. Run nodemon
 5. Setup your database and models, see table below:
 
@@ -71,3 +72,11 @@ Website Used: drawio-app.com
 7. Create a .env file, this will keep your port and session_secret private.
   * SESSION_SECRET (you choose this)
   * PORT= (choose the local host port you want)     
+
+
+  ### Sources
+
+
+  API Info:
+
+  https://www.petfinder.com/developers/api-docs 

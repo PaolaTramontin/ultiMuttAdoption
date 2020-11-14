@@ -1,19 +1,20 @@
 <h3 id="all"> All Available Furry Friends</h3>
 <a id="favLink" href="/favorites"> Click Here To See Your Favorites</a>
 
-<div class="details">
-    <hr />
-    <% allPets.animals.forEach(a=>{ %>
+<hr />
+<% allPets.animals.forEach(a=>{ %>
+        <div class="details">
         <hr />
+        <p id="info2"> 
          <p> <b>Animal Type: </b><%=a.type%></p>
          <p> <b>Furry Friend's Name: </b><%=a.name%></p>
          <p> <b>Gender: </b><%=a.gender%></p>
          <p> <b>Breed: </b><%=a.breeds.primary%></p>
          <%if(a.primary_photo_cropped){ %>
                 <p> <img src="<%=a.primary_photo_cropped.medium%>"<% alt="no img" %> width="300" </p>
+            </p>
         <% } %> 
-       
-         <form method="POST" action="/favorites">
+        <form method="POST" action="/favorites">
             <input hidden type="text" name="name" value="<%= a.name %>">
             <input hidden type="text" name="id" value="<%= a.id %>">
             <input hidden type="text" name="contact" value="<%= a.contact.email%>">
@@ -21,9 +22,10 @@
             <input hidden type="text" name="description" value="<%= a.description%>">
             <input hidden type="text" name="location" value="<%= a.contact.address.city%>">
             <%if(a.primary_photo_cropped){ %> 
-                 <input hidden type="text" name="photo" value="<%= a.primary_photo_cropped.small%>">  <% } %>
-            <!-- <input hidden type="text" name="photo" value="no photo">      -->
-            <button class="btn btn-primary" id="buttonHeart" type="submit">Heart This Pet</button>
-          </form>
-    <% }) %>
-</div>
+                <input hidden type="text" name="photo" value="<%= a.primary_photo_cropped.small%>">  <% } %>
+                <!-- <input hidden type="text" name="photo" value="no photo">      -->
+                <button class="btn btn-primary" id="buttonHeart" type="submit">Heart This Pet</button>
+            </form>
+        </div>
+            <% }) %>
+

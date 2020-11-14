@@ -74,23 +74,6 @@ router.put('/:id', (req, res)=> {
 
 
 
-//EDIT COMMENT ROUTE to show on the fav page, broken
-// router.put('/:id', (req, res)=> {
-//   db.userpet.update(
-//     {comment: req.body.comment},
-//     {where: {userId: req.user.id, petId:req.params.id},
-//     include: [db.pet]
-//   }).then(([foundComment, created])=>{
-//       foundComment.addPet(req.params.id)
-//     .then(createdRelation=>{
-//        console.log("createdRelation:", createdRelation)
-//        res.redirect('/favorites')
-//     })
-//     })
-// })
-
-
-
 
 
 

@@ -84,12 +84,39 @@ img{
     align-self: center;
 }
 
+/* this is the div for all the pets */
 .details{
-    justify-content: center;
+    /* justify-content: center;
     background-color: rgba(238, 237, 238, 0.334);
     border:3px solid gray;
     align-items: center;
     text-align:center;
+    align-self: flex-start;
+    flex-wrap:wrap; 
+     align-items: flex-start; 
+     text-align:center; 
+     border:3px solid black;
+    background-color: rgba(19, 18, 19, 0.79);
+    color:white; 
+    justify-content:flex-start;
+    width:400px;
+    text-align:center;
+    display:inline-block;  */
+    align-items: center;
+    text-align:center;
+    border:3px solid black;
+    background-color: rgba(238, 237, 238, 0.334);
+    color:white;
+    justify-content:center;
+}
+
+#container{
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-content: center;
+flex-flow: column wrap
 }
 
 

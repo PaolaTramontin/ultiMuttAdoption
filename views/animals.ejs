@@ -1,4 +1,4 @@
-<h1> All Available Furry Friends</h1>
+<h3 id="all"> All Available Furry Friends</h3>
 <a id="favLink" href="/favorites"> Click Here To See Your Favorites</a>
 
 <div class="details">
@@ -23,7 +23,7 @@
             <%if(a.primary_photo_cropped){ %> 
                  <input hidden type="text" name="photo" value="<%= a.primary_photo_cropped.small%>">  <% } %>
             <!-- <input hidden type="text" name="photo" value="no photo">      -->
-            <button class="btn btn-primary" id="button" type="submit">Heart This Pet</button>
+            <button class="btn btn-primary" id="buttonHeart" type="submit">Heart This Pet</button>
           </form>
     <% }) %>
 </div>

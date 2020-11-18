@@ -2,12 +2,13 @@ const express = require('express');
 const db = require('../models');
 const router = express.Router();
 const axios = require('axios'); 
+const isLoggedIn = require('../middleware/isLoggedIn')
 
 
 
 
 // POST /favorites - receive the info of an animal and add it to the database
-router.post('/', (req, res)=>{
+router.post('/',isLoggedIn, (req, res)=>{
     db.pet.findOrCreate({
       where: {PetName: req.body.name, ReferenceId: req.body.id, Contact: req.body.contact, Status: req.body.status, Description: req.body.description, Location: req.body.location, Photo: req.body.photo || ''},
       include: [db.user],
@@ -28,7 +29,7 @@ router.post('/', (req, res)=>{
 
 
 //GET /favorites - return a page with favorited animals
-router.get('/', (req, res)=> {
+router.get('/', isLoggedIn, (req, res)=> {
   db.user.findOne({
     where: {id: req.user.id},
     include:[db.pet]
@@ -41,7 +42,7 @@ router.get('/', (req, res)=> {
 
 
 //DELETE A PET FROM MY PET (FAVORITES)
-router.delete('/:id', (req, res)=>{  
+router.delete('/:id',isLoggedIn, (req, res)=>{  
   db.pet.destroy({
     where: {id: req.params.id}
   })
@@ -56,7 +57,7 @@ router.delete('/:id', (req, res)=>{
 
 
 //EDIT COMMENT ROUTE
-router.put('/:id', (req, res)=> {
+router.put('/:id',isLoggedIn, (req, res)=> {
   // console.log('@@@@@@@', req.params)
   // console.log('@@@@@@@', req.user.id)
   db.userpet.update(

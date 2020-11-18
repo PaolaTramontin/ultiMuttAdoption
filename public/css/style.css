@@ -35,8 +35,9 @@ header{
 
 
 #title{
-    color:red;
+    /* color:red;
     font-size: 70px;
+    font-family:Copperplate; */
 }
 
 /* this is the color for the sign up and log in*/
@@ -61,17 +62,21 @@ a{
     margin-top:100px;
 }
 
-/* footer{
+footer{
     border:2px solid white;
     text-align: right;
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
-    color:white;
-    background-color:black;
-}  */
+    color:black;
+    background-color:white;
+} 
 
+
+#footerlink{
+  color:black;
+}
 
 #allPets{
     color:white;
@@ -276,9 +281,9 @@ label {
 
 
 #title{
-    /* font-family:Copperplate; */
-    font-family: Brushstroke;
-    font-size:80px;
+    font-family:Copperplate; 
+    /* font-family: Brushstroke; */
+    font-size:60px;
     color:white;
     margin-left:10px;
     /* border:3px solid red; */
@@ -491,3 +496,6 @@ span:nth-child(18) {
     float: left;
 
 } */
+
+
+

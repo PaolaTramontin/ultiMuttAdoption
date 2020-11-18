@@ -2,12 +2,13 @@ const express = require('express');
 const db = require('../models');
 const router = express.Router();
 const axios = require('axios'); 
+const isLoggedIn = require('../middleware/isLoggedIn')
 
 
 
 
 //SHOW ME ALL THE COMMENTS ABOUT THAT PET
-router.get('/:petId', (req, res)=> {
+router.get('/:petId',isLoggedIn, (req, res)=> {
     db.userpet.findOne({
       where: {userId: req.user.id, petId:req.params.petId},
     })

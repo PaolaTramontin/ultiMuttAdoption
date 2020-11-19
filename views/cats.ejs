@@ -1,0 +1,13 @@
+<% allCats.animals.forEach(c=>{ %>
+    <div class="details">
+    <hr />
+    <p id="info2"> 
+     <p> <b>Animal Type: </b><%=c.type%></p>
+     <p> <b>Furry Friend's Name: </b><%=c.name%></p>
+     <p> <b>Gender: </b><%=c.gender%></p>
+     <%if(c.primary_photo_cropped){ %>
+            <p> <img src="<%=c.primary_photo_cropped.medium%>"<% alt="no img" %> width="300" </p>
+        </p>
+    <% } %> 
+</div>
+<% }) %>

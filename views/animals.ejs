@@ -1,6 +1,6 @@
-<h3 id="all"> All Available Furry Friends</h3>
+<h3 id="animalPageHeader"> All Available Furry Friends</h3>
 <a id="favLink" href="/favorites"> Click Here To See Your Favorites</a>
-
+<div id="detailsContainer"> 
 <hr />
 <% allPets.animals.forEach(a=>{ %>
         <div class="details">
@@ -11,7 +11,7 @@
          <p> <b>Gender: </b><%=a.gender%></p>
          <p> <b>Breed: </b><%=a.breeds.primary%></p>
          <%if(a.primary_photo_cropped){ %>
-                <p> <img src="<%=a.primary_photo_cropped.medium%>"<% alt="no img" %> width="300" </p>
+                <p> <img id="animalImg" src="<%=a.primary_photo_cropped.medium%>"<% alt="no img" %> width="300" </p>
             </p>
         <% } %> 
         <form method="POST" action="/favorites">
@@ -28,4 +28,5 @@
             </form>
         </div>
             <% }) %>
+</div>           
 

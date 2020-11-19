@@ -17,6 +17,7 @@ app.use(ejsLayouts)
 //setup css
 app.use(express.static(__dirname + '/public'));
 
+
 //setup method override:
 app.use(methodOverride('_method'))
 

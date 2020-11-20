@@ -1,6 +1,8 @@
 body{  /* INFO ABOUT THE BODY & BACKGROUND IMG */
     /* background-image: url('https://newevolutiondesigns.com/images/freebies/dog-wallpaper-49.jpg'); */
-    background-image: url('https://wallpaperaccess.com/full/434963.jpg');
+    /* background-image: url('https://wallpaperaccess.com/full/434963.jpg'); */
+    /* background-image: url('https://blogs.biomedcentral.com/on-biology/wp-content/uploads/sites/5/2018/04/nature-3042751_1920-copy-2.jpg'); */
+    background-image: url('https://nenana.co/wp-content/uploads/2020/05/Cute-baby-and-dog-friendship-wallpaper.jpg');
     background-repeat: no-repeat;
     background-color:black;
     background-attachment: fixed;
@@ -17,20 +19,12 @@ body{  /* INFO ABOUT THE BODY & BACKGROUND IMG */
 
 /* this has the white line on top of the page */
 header{
-    background-color:white;
-    height:80px;
-    width: 100%;
-    align-items: center;
-    color:white;
-    font-size:20px;
-}
-
-/* this is the div for the sign up and log in */ 
-#sign{
-    color:white;
-    padding-right: 0px;
-    text-align: left;
-    font-size:25px;
+  background-color:white;
+  height:40px;
+  width: 100%;
+  color:transparent;
+  display:flex;
+  justify-content:center;
 }
 
 
@@ -51,31 +45,31 @@ header{
 
 /* parent container for divs /animals page */
 #dogContainer{
-/* border: 4px solid red; */
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+  /* border: 4px solid red; */
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 /* this is the text part of each animal div on /animals page */
 #dogText{
-/* border:2px solid red; */
-height:15%;
-background-color: rgba(238, 237, 238, 0.434);
+  /* border:2px solid red; */
+  height:15%;
+  background-color: rgba(238, 237, 238, 0.434);
 }
 
 
 /* this is the background pic for the /animals page */
 #animalPageBackgroundPic{
-background-image: url('https://api.time.com/wp-content/uploads/2015/04/dog-child.jpg');
-background-repeat: no-repeat;
-background-color:black;
-background-attachment: fixed;
-background-size: 100% 100%;
-width:100%;
-height:100%;
-background-position: center center;
-background-size: cover;
+  background-image: url('https://api.time.com/wp-content/uploads/2015/04/dog-child.jpg');
+  background-repeat: no-repeat;
+  background-color:black;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  width:100%;
+  height:100%;
+  background-position: center center;
+  background-size: cover;
 }
 
 
@@ -93,7 +87,16 @@ background-size: cover;
 /* this is the color for the sign up and log in*/
 a{
     color:black;
-    font-family:Copperplate;
+    /* font-family:Copperplate; */
+    /* background-color: #555; */
+    color: black;
+    font-family: 'Architects Daughter';
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 27px;
+    height:100%;
 }
 
 /* this is the return to all pets anchor tag */
@@ -250,11 +253,11 @@ flex-flow: column wrap
 
 
 
-#favLink{
-    color:white;
+/* #favLink{
+    color:black;
     font-size:20px;
-   text-align: center;
-}
+   align-self: center;
+} */
 
 button{
     /* background-image: url('https://newevolutiondesigns.com/images/freebies/dog-wallpaper-49.jpg');
@@ -305,41 +308,53 @@ label {
 
 
 #title{
-    font-family:Copperplate; 
+    /* font-family:Copperplate;  */
     /* font-family: Brushstroke; */
-    font-size:60px;
-    color:white;
-    margin-left:10px;
+    font-family: 'Rock Salt';
+    font-size:55px;
+    /* color:rgb(255, 250, 250); */
+    margin-right:550px;
     /* border:3px solid red; */
-    margin-right:600px;
-  
+    /* margin-right:600px;  */
+    background-image:linear-gradient(to right, #f9f6f6,#5b5959, #100f0f); 
+    color:rgba(237, 24, 24, 0); 
+    -webkit-background-clip:text; background-clip:text;
+    100f0f
+    
 }
 
 #animalPageHeader{
     /* font-family:Copperplate; */
-    font-family:  'Arapey', serif;
+    /* font-family:  'Arapey', serif; */
+    font-family: 'Shadows Into Light', cursive;
     font-size:70px;
-    color:white;
+    color:black;
     text-align:center;
 }
 
 
 
+#about{
+  font-size:15px;
+  margin-right:1200px;
+  font-family: 'Architects Daughter';
+}
+
 #minititle{
-        display: inline-block;
+       
         color:white;
         font-size:25px;
-        
-        background: #acacac -webkit-gradient(linear, 100% 0, 0 0, from(#acacac), color-stop(0.5, #ffffff), to(#acacac));
+        margin-right:400px;
+        background: #f7f6f6 -webkit-gradient(linear, 100% 0, 0 0, from(#acacac), color-stop(0.5, #373636), to(#484747));
         
         background-position: -4rem top; /*50px*/
         background-repeat: no-repeat;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-animation-name: shimmer;
-        -webkit-animation-duration: 2.2s;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-background-size: 4rem 100%; /*50px*/
+        -webkit-animation-duration: 3.2s;
+        /* -webkit-animation-iteration-count: infinite; */
+        -webkit-background-size: 20rem 100%; /*50px*/
         
       }
       
@@ -389,7 +404,7 @@ h1 {
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   margin-right:975px;
-  font-size:15px;
+  font-size:22px;
   margin-top:120px;
 }
 @keyframes scale {

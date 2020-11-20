@@ -116,7 +116,7 @@ header{
   border: 3px solid transparent;
   background-color: rgba(238, 237, 238, 0.134);
   color:black;
-  width:25%;
+  width:33%;
 }
 
 #catText{
@@ -130,6 +130,12 @@ header{
   width:70%;
 }
 
+
+#andrea{
+
+  font-size:90px;
+  text-align: center;
+}
 
 /* this is the color for the sign up and log in*/
 a{

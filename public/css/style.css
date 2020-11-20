@@ -77,7 +77,16 @@ header{
 /* CODE BELOW IS FOR CAT PAGE */
 
 #catPageBackgroundPic{
-  /* background-image: url('https://i.postimg.cc/FzfYVL9F/00100d-PORTRAIT-00100-BURST20200508100235975-COVER-2.jpg');
+  background-image: url('https://i.postimg.cc/FzfYVL9F/00100d-PORTRAIT-00100-BURST20200508100235975-COVER-2.jpg');
+  /* background-repeat: no-repeat;
+  background-color:white;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  width:100%;
+  height:100%;
+  background-position: center center;
+  background-size: 100vh;
+  color:black; */
   background-repeat: no-repeat;
   background-color:black;
   background-attachment: fixed;
@@ -85,28 +94,40 @@ header{
   width:100%;
   height:100%;
   background-position: center center;
-  background-size: cover; */
-  background-image: url('https://i.postimg.cc/FzfYVL9F/00100d-PORTRAIT-00100-BURST20200508100235975-COVER-2.jpg');
-  background-repeat: no-repeat;
-  background-color:black;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+  /* background-size: cover; */
+}
+
+#catContainer{
   display:flex;
-  flex-direction:column;
-  justify-content: space-between;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+#catText{
+  height:10%;
+  background-color: rgba(238, 237, 238, 0.434);
+}
+
+.cat{
   align-items: center;
-  width:100vw;
-  color:white;
-  background-size: cover;
-  
+  text-align:center;
+  justify-content:center;
+  border: 3px solid transparent;
+  background-color: rgba(238, 237, 238, 0.134);
+  color:black;
+  width:25%;
+}
+
+#catText{
+  height:15%;
+  background-color: rgba(238, 237, 238, 0.434);
 }
 
 
-
-
-
-
-
+#catImg{
+  height:35vh;
+  width:70%;
+}
 
 
 /* this is the color for the sign up and log in*/

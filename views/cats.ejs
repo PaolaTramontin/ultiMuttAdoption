@@ -1,16 +1,35 @@
 <div id="catPageBackgroundPic"> 
-    <% allCats.animals.forEach(c=>{ %>
-    <div class="details">
-    <hr />
-    <p id="info2"> 
-     <p> <b>Animal Type: </b><%=c.type%></p>
-     <p> <b>Furry Friend's Name: </b><%=c.name%></p>
-     <p> <b>Gender: </b><%=c.gender%></p>
-     <%if(c.primary_photo_cropped){ %>
-            <p> <img src="<%=c.primary_photo_cropped.medium%>"<% alt="no img" %> width="300" </p>
-        </p>
-    <% } %> 
+    <!-- <h3 id="animalPageHeader"> All Available Furry Friends</h3> -->
+    <!-- <a id="favLink" href="/favorites"> Click Here To See Your Favorites</a> -->
+    <div id="catContainer"> 
+        <hr/>
+        <% allCats.animals.forEach(c=>{ %>
+            <div class="cat">
+                <hr />
+                <div id="catText"> 
+                    <p> <b>Animal Type: </b><%=c.type%></p>
+                    <p> <b>Furry Friend's Name: </b><%=c.name%></p>
+                    <p> <b>Gender: </b><%=c.gender%></p>
+                    <p> <b>Breed: </b><%=c.breeds.primary%></p>
+                </div>
+                <%if(c.primary_photo_cropped){ %>
+                     <p>
+                        <img id="catImg" src="<%=c.primary_photo_cropped.medium%>"<% alt="no img" %> width="300"> 
+                     </p>
+                <% } %> 
+                <form method="POST" action="/favorites">
+                    <input hidden type="text" name="name" value="<%= c.name %>">
+                    <input hidden type="text" name="id" value="<%= c.id %>">
+                    <input hidden type="text" name="contact" value="<%= c.contact.email%>">
+                    <input hidden type="text" name="status" value="<%= c.status%>">
+                    <input hidden type="text" name="description" value="<%= c.description%>">
+                    <input hidden type="text" name="location" value="<%= c.contact.address.city%>">
+                    <%if(c.primary_photo_cropped){ %> 
+                        <input hidden type="text" name="photo" value="<%= c.primary_photo_cropped.small%>">  <% } %>
+                        <!-- <input hidden type="text" name="photo" value="no photo">      -->
+                    <button class="btn btn-primary" id="buttonHeart" type="submit">Heart This Pet</button>
+                </form>
+            </div>
+            <% }) %>
+    </div>           
 </div>
-<% }) %>
-
-</div> 

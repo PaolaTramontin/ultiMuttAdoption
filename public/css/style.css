@@ -78,37 +78,6 @@ header{
 
 #catPageBackgroundPic{
   background-image: url('https://i.postimg.cc/FzfYVL9F/00100d-PORTRAIT-00100-BURST20200508100235975-COVER-2.jpg');
-  /* background-repeat: no-repeat;
-  background-color:white;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  width:100%;
-  height:100%;
-  background-position: center center;
-  background-size: 100vh;
-  color:black; */
-   /* background-size: cover; */
-
-
-  /* background-repeat: no-repeat;
-  background-color:transparent;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  width:100%;
-  height:100%;
-  background-position: center center;
-   background-size: 100vh; */
-
-
-   /* background-repeat: no-repeat;
-   background-color:black;
-   background-attachment: fixed;
-   background-size: 100% 100%;
-   width:100%;
-   height:100%;
-   background-position: center center;
-   background-size: cover; */
-
    background-repeat: no-repeat;
    background-color:black;
    background-attachment: fixed;
@@ -116,9 +85,6 @@ header{
    display:flex;
    width:100vw;
    color:white;
-
-
-
   }
 
 #catContainer{
@@ -155,6 +121,29 @@ header{
 
 
 
+
+/* CODE BELOW IS FOR PROFILE PAGE */
+
+
+#profileBackgroundPic{
+  background-image: url('https://www.itl.cat/pngfile/big/290-2904807_cats-dogs-wallpaper-desktop-cat-and-dog-hug.jpg');
+  background-repeat: no-repeat;
+  background-color:black;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+  width:100vw;
+  color:white;
+
+}
+
+
+
+
+
 /* this is the color for the sign up and log in*/
 a{
     color:black;
@@ -187,14 +176,15 @@ a{
 }
 
 footer{
-    border:2px solid white;
-    text-align: right;
-    position: absolute;
+
+
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
+    background-color: white;
+    color: black;
     text-align: center;
-    color:black;
-    background-color:white;
 } 
 
 

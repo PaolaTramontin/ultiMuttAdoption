@@ -154,7 +154,10 @@ header{
 
 
 #profileBackgroundPic{
-  background-image: url('https://www.itl.cat/pngfile/big/290-2904807_cats-dogs-wallpaper-desktop-cat-and-dog-hug.jpg');
+  /* background-image: url('https://cdn.wallpaperhi.com/1920x1200/20120622/studio%20animals%20photography%20dogs%20portrait%20black%20background%201920x1200%20wallpaper_www.wallpaperhi.com_36.jpg'); */
+  /* background-image: url('https://wallup.net/wp-content/uploads/2016/01/63137-dog-animals-snow-leaves-fall-Labrador_Retriever.jpg'); */
+
+  background-image: url('https://aerospaceamerica.aiaa.org/wp-content/uploads/2018/05/opinion-dog-cat.jpg');
   background-repeat: no-repeat;
   background-color:black;
   background-attachment: fixed;
@@ -166,6 +169,10 @@ header{
   height:100vh;
   width:100vw;
   color:white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   
 }
 

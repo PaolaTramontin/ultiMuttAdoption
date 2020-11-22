@@ -2,18 +2,24 @@ body{  /* INFO ABOUT THE BODY & BACKGROUND IMG */
     /* background-image: url('https://newevolutiondesigns.com/images/freebies/dog-wallpaper-49.jpg'); */
     /* background-image: url('https://wallpaperaccess.com/full/434963.jpg'); */
     /* background-image: url('https://blogs.biomedcentral.com/on-biology/wp-content/uploads/sites/5/2018/04/nature-3042751_1920-copy-2.jpg'); */
-    background-image: url('https://nenana.co/wp-content/uploads/2020/05/Cute-baby-and-dog-friendship-wallpaper.jpg');
-    background-repeat: no-repeat;
-    background-color:black;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
-    align-items: center;
-    width:100vw;
-    height:100vh;
-    color:white;
+  background-image: url('https://nenana.co/wp-content/uploads/2020/05/Cute-baby-and-dog-friendship-wallpaper.jpg');
+    /* background-repeat: no-repeat; */
+  background-color:black;
+    /* background-attachment: fixed; */
+    /* background-size: contain;
+    background-position: center;  */
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+    /* width:100vw;
+    height:100vh; */
+  color:white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+    
 }
 
 
@@ -21,7 +27,7 @@ body{  /* INFO ABOUT THE BODY & BACKGROUND IMG */
 /* this has the white line on top of the page */
 header{
   background-color:white;
-  height:40px;
+  height:10%;
   width: 100%;
   color:transparent;
   display:flex;
@@ -37,27 +43,43 @@ header{
   align-items: center;
   text-align:center;
   justify-content:center;
-  border: 3px solid transparent;
+  /* border: 3px solid transparent; */
   background-color: rgba(238, 237, 238, 0.134);
   color:black;
-  width:25%;
-  /* border: 3px solid yellow; */
+  width:33%;
+  height:35vw;
+  font-size:1.2vw;
+  border:.3vw solid transparent;
+  /* padding-left:5%; */
 }
 
 /* parent container for divs /animals page */
 #dogContainer{
-  /* border: 4px solid red; */
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
+  /* border: 3px solid red; */
 }
 
 /* this is the text part of each animal div on /animals page */
 #dogText{
-  /* border:2px solid red; */
-  height:19%;
+  /* border:2px solid green; */
+  height:18%;
   background-color: rgba(238, 237, 238, 0.434);
+  color:black;
+  font-size:1.3vw;
+
 }
+
+#animalImg{
+  /* border:1.6px solid hotpink; */
+  width:  20.5vw;
+  height: 23.5vw;
+  object-fit: cover;
+  border-radius:30%;
+  border: .1vw solid white;
+}
+
 
 
 /* this is the background pic for the /animals page */
@@ -71,6 +93,11 @@ header{
   height:100%;
   background-position: center center;
   background-size: cover;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
 }
 
 
@@ -136,8 +163,10 @@ header{
   flex-direction:column;
   justify-content: space-between;
   align-items: center;
+  height:100vh;
   width:100vw;
   color:white;
+  
 }
 
 /* CODE BELOW IS RELATED TO THE FORM */
@@ -198,7 +227,7 @@ header{
 }
 
 #logTitle{
- font-size:25px;
+ /* font-size:25px; */
   position: absolute; /* or absolute */
   top: 35%;
   left: 40%;
@@ -214,7 +243,7 @@ header{
 }
 
 #LogInText{
-  font-size:30px;
+  font-size:3.5vw;
   font-family: Cambria, Cochin, Georgia, serif;
 }
 
@@ -222,12 +251,15 @@ header{
   background-color: rgba(90, 75, 76, 0.434);
   position: absolute; /* or absolute */
   top: 35%;
-  left: 40%;
-  height:20%;
+  left: 35%;
+  height:25%;
+  width:30%;
+  display:block;
+  align-items: center;
 }
 
 #SignInText{
-  font-size:30px;
+  font-size:3.5vw;
   font-family: Cambria, Cochin, Georgia, serif;
 }
 
@@ -245,7 +277,7 @@ a{
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    font-size: 27px;
+    font-size: 2.4vw;
     height:100%;
 }
 
@@ -282,21 +314,23 @@ footer{
   color:black;
 }
 
-#allPets{
+/* #allPets{
     color:white;
     font-size:40px;
+} */
+
+.icon{
+  color:white;
+
 }
 
-img{
+/* img{
     background-color:white;
     border:5px solid white;
     align-self: center;
-}
+} */
 
 
-#animalImg{
-  height:30vh;
-}
 
 
 
@@ -438,8 +472,9 @@ button{
 
 
 #buttonHeart{
-    height:35px;
-    width:100px;
+    height:3vw;
+    width:30%;
+    font-size:1vw;
 }
 button:hover{
     color:red;
@@ -479,7 +514,7 @@ label {
   left: 5%;
   position: absolute;
   font-family: 'Rock Salt';
-  font-size:55px;
+  font-size:3.5vw;
   background-image:linear-gradient(to right, #f9f6f6,#5b5959, #100f0f); 
   color:rgba(237, 24, 24, 0); 
   -webkit-background-clip:text; background-clip:text;
@@ -505,7 +540,7 @@ label {
 
 
 #about{
-  font-size:15px;
+  font-size:1vw;
   font-family: 'Architects Daughter';
   top: 50%;
   left: 2%;

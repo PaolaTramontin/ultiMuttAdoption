@@ -2,20 +2,21 @@
     <!-- <h3 id="animalPageHeader"> All Available Furry Friends</h3> -->
     <!-- <a id="favLink" href="/favorites"> Click Here To See Your Favorites</a> -->
     <div id="dogContainer"> 
-        <hr/>
+        <!-- <hr/> -->
         <% allPets.animals.forEach(a=>{ %>
             <div class="dog">
-                <hr />
+                <!-- <hr /> -->
                 <div id="dogText"> 
                     <p> <b>Animal Type: </b><%=a.type%></p>
                     <p> <b>Furry Friend's Name: </b><%=a.name%></p>
-                    <p> <b>Gender: </b><%=a.gender%></p>
+                    <p> <b>Gender: </b><%=a.gender%> </p>
                     <p> <b>Breed: </b><%=a.breeds.primary%></p>
                 </div>
                 <%if(a.primary_photo_cropped){ %>
                      <p>
-                        <img id="animalImg" src="<%=a.primary_photo_cropped.medium%>"<% alt="no img" %> width="300"> 
+                        <img id="animalImg" src="<%=a.primary_photo_cropped.medium%>"<% alt="no img" %>/> 
                      </p>
+            
                 <% } %> 
                 <form method="POST" action="/favorites">
                     <input hidden type="text" name="name" value="<%= a.name %>">

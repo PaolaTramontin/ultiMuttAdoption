@@ -1,13 +1,24 @@
 <div id="profileBackgroundPic"> 
 <h2> <%= currentUser.name%> 's profile </h2>
-    <a id="allPets" href="/animals"> Click here for <i style='font-size:35px;color:white' class='fas'>&#xf6d3;</i></a>
-    <a id="allPets" href="/cats"> Click here for <i style='font-size:35px;color:white' class='fas'>&#xf6be;</i></a>
+
+<br>
+<div id= "zipDiv"> 
+<form method="GET" action="/animals"> 
+    <label id="ZipFormText" for="nameFilter"> Type Your Zip Code Below </label> 
+    <input id="ZipFormTextArea" type="text" placeholder="Search.." id="zipilter" name="zipFilter">    
+    <button id="ZipFormSearchButton" type="submit" value="search"> <i class="fa fa-search"> </i></button>
+</form>
+</div>
+
+
+<!-- 
+<br>
+<a id="allPets" href="/animals"> Click here for <i style='font-size:35px;color:white' class='fas'>&#xf6d3;</i></a>
+<a id="allPets" href="/cats"> Click here for <i style='font-size:35px;color:white' class='fas'>&#xf6be;</i></a>
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
+<br> -->
 <br>
 <br>
 <br>

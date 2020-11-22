@@ -12,6 +12,7 @@ body{  /* INFO ABOUT THE BODY & BACKGROUND IMG */
     justify-content: space-between;
     align-items: center;
     width:100vw;
+    height:100vh;
     color:white;
 }
 
@@ -54,7 +55,7 @@ header{
 /* this is the text part of each animal div on /animals page */
 #dogText{
   /* border:2px solid red; */
-  height:15%;
+  height:19%;
   background-color: rgba(238, 237, 238, 0.434);
 }
 
@@ -137,9 +138,98 @@ header{
   align-items: center;
   width:100vw;
   color:white;
-
 }
 
+/* CODE BELOW IS RELATED TO THE FORM */
+#ZipFormText{
+  font-size:30px;
+}
+
+#ZipFormTextArea{
+  width: 50%;
+  padding: 5px;
+  padding-right: 40px;
+  outline: none;
+  border: 2px solid #818181;
+  border-radius: 5px;
+  background-color: #FBFBFB;
+  font-family: Cambria, Cochin, Georgia, serif;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+
+#ZipFormTextArea:focus {
+  border: 3px solid rgb(23, 67, 209);
+}
+
+
+#ZipFormSearchButton{
+  background-color: #4c74af;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-decoration: none;
+  height:40%;
+  /* margin: 4px 2px; */
+  margin: auto;
+  cursor: pointer;
+  align-self: center;
+}
+
+#zipDiv{
+  background-color: rgba(90, 75, 76, 0.434);
+  position: absolute; /* or absolute */
+  top: 30%;
+  left: 40%;
+}
+
+
+#logInDivInfo{
+  background-color: rgba(90, 75, 76, 0.434);
+  position: absolute; /* or absolute */
+  top: 40%;
+  left: 45%;
+}
+
+#logTitle{
+ font-size:25px;
+  position: absolute; /* or absolute */
+  top: 35%;
+  left: 40%;
+}
+
+
+#LogContainer{
+  background-color: rgba(90, 75, 76, 0.434);
+  position: absolute; /* or absolute */
+  top: 35%;
+  left: 40%;
+  height:20%;
+}
+
+#LogInText{
+  font-size:30px;
+  font-family: Cambria, Cochin, Georgia, serif;
+}
+
+#SignContainer{
+  background-color: rgba(90, 75, 76, 0.434);
+  position: absolute; /* or absolute */
+  top: 35%;
+  left: 40%;
+  height:20%;
+}
+
+#SignInText{
+  font-size:30px;
+  font-family: Cambria, Cochin, Georgia, serif;
+}
 
 
 
@@ -205,8 +295,17 @@ img{
 
 
 #animalImg{
-  height:40vh;
+  height:30vh;
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -218,6 +317,12 @@ img{
   height:20%;
   background-color: rgba(238, 237, 238, 0.434);
 }
+
+
+
+
+
+
 
 
 #container{
@@ -369,18 +474,22 @@ label {
 
 
 #title{
+  
+  top: 11%;
+  left: 5%;
+  position: absolute;
+  font-family: 'Rock Salt';
+  font-size:55px;
+  background-image:linear-gradient(to right, #f9f6f6,#5b5959, #100f0f); 
+  color:rgba(237, 24, 24, 0); 
+  -webkit-background-clip:text; background-clip:text;
+  100f0f
     /* font-family:Copperplate;  */
     /* font-family: Brushstroke; */
-    font-family: 'Rock Salt';
-    font-size:55px;
     /* color:rgb(255, 250, 250); */
-    margin-right:550px;
+    /* margin-right:550px; */
     /* border:3px solid red; */
     /* margin-right:600px;  */
-    background-image:linear-gradient(to right, #f9f6f6,#5b5959, #100f0f); 
-    color:rgba(237, 24, 24, 0); 
-    -webkit-background-clip:text; background-clip:text;
-    100f0f
     
 }
 
@@ -397,8 +506,11 @@ label {
 
 #about{
   font-size:15px;
-  margin-right:1200px;
   font-family: 'Architects Daughter';
+  top: 50%;
+  left: 2%;
+  position: absolute;
+  /* margin-right:1200px; */
 }
 
 #minititle{

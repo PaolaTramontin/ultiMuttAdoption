@@ -1,14 +1,14 @@
-<h2> Sign Up Form Goes Here</h2>
+<div id="SignContainer"> 
+    <h2 id="SignInText">  Sign Up Form Goes Here</h2>
+    <br>
 <!-- action /auth/sign up will look for a post route that has that url pattern and will post it there -->
-<form method="POST" action="/auth/signup">
-    <label for="new-name"> Name </label>
-    <input type="text" name="name" id="new-name">
-
-    <label for="new-email"> Email </label>
-    <input type="email" name="email" id="new-email">
-
-    <label for="new-password"> Password </label>
-    <input type="password" name="password" id="new-password">
-
-    <input type="submit" value="Sign Up"></input>
-</form>
+    <form method="POST" action="/auth/signup">
+        <label for="new-name"> Name </label>
+        <input type="text" name="name" id="new-name">
+        <label for="new-email"> Email </label>
+        <input type="email" name="email" id="new-email">
+        <label for="new-password"> Password </label>
+        <input type="password" name="password" id="new-password">
+        <input type="submit" value="Sign Up"></input>
+    </form>
+</div>  

@@ -912,16 +912,8 @@ a{
 }
 
 #animalPageBackgroundPic{
-  background-image: url('https://www.wallpapertip.com/wmimgs/85-854075_cat-and-dog-vertical.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-  display:flex;
-  flex-direction:column;
-  justify-content: space-between;
-  align-items: center;
-  color:white;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: 100% 80%;
+  background-image: url('https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+
 }
 
 
@@ -1005,16 +997,7 @@ font-size:1.1vw;
 }
 
 #catPageBackgroundPic{
-  background-image: url('https://i.postimg.cc/FzfYVL9F/00100d-PORTRAIT-00100-BURST20200508100235975-COVER-2.jpg');
-  display:flex;
-  flex-direction:column;
-  justify-content: space-between;
-  align-items: center;
-  color:white;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: 100% 80%;
+  background-image: url('https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
   }
 
 .cat{

@@ -911,10 +911,10 @@ a{
   align-self: center;
 }
 
-#animalPageBackgroundPic{
+/* #animalPageBackgroundPic{
   background-image: url('https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
 
-}
+} */
 
 
 
@@ -996,11 +996,11 @@ font-size:1.1vw;
   padding-top:0%;
 }
 
-#catPageBackgroundPic{
+/* #catPageBackgroundPic{
   background-image: url('https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
   width:100%vw;
   height:100%vh;
-  }
+  } */
 
 .cat{
   align-items: center;

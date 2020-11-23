@@ -913,7 +913,7 @@ a{
 
 #animalPageBackgroundPic{
   background-image: url('https://www.itl.cat/pngfile/big/187-1876859_light-gradient-background-gradient-background-light-gradient-hd.jpg');
-    width:100%vw;
+  width:100%vw;
   height:100%vh;
 }
 
@@ -922,12 +922,14 @@ a{
   flex-wrap:wrap;
   justify-content:center;
   height:80%;
+  width:100%;
   /* border: 3px solid red; */
 }
 
 .dog{
   /* border: 3px solid red; */
   height:35%;
+  width:33%;
 }
 
 #dogText{
@@ -1010,7 +1012,7 @@ margin-top:20%;
 
 #delete{
 background-color: rgba(238, 237, 238, 0.334);
-color:white;
+color:black;
 height:10%;
 width:100%;
 font-size:1.1vw;

@@ -912,12 +912,26 @@ a{
 }
 
 #animalPageBackgroundPic{
-  background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/15549a14589707.5628669c64769.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('https://www.itl.cat/pngfile/big/187-1876859_light-gradient-background-gradient-background-light-gradient-hd.jpg');
+
 }
 
+#dogContainer{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  height:80%;
+  /* border: 3px solid red; */
+}
 
+#dogText{
+  /* border:2px solid green; */
+  height:22%;
+  background-color: rgba(238, 237, 238, 0.434);
+  color:black;
+  font-size:1.3vw;
+
+}
 
 .well{
   /* align-items: stretch; */

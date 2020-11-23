@@ -1,7 +1,10 @@
 
 ## The UltiMutt Adoption
 
-Link to gitHub:https://paolatramontin.github.io/ultiMuttAdoption/
+Link: https://ultimuttadoption.herokuapp.com/
+
+Test Email: usertest@gmail.com
+Password: thisisatest
 
 
 *Are you looking to expand your family? Do you need a new BFF? 
@@ -9,7 +12,8 @@ Link to gitHub:https://paolatramontin.github.io/ultiMuttAdoption/
 Sign up to easily track your new bff and access their current location, contact information, short description and photo!* 
 
 
-<img width="1210" alt="project2LogIn" src="https://user-images.githubusercontent.com/69879822/98846834-83decb80-241d-11eb-83d7-307399a08b50.png">
+<img width="1130" alt="Screen Shot 2020-11-23 at 5 07 09 PM" src="https://user-images.githubusercontent.com/69879822/100021204-1cc2fe80-2daf-11eb-92d4-e1cfd96aab50.png">
+
 
 
 

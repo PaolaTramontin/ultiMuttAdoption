@@ -6,7 +6,7 @@
 <hr />
     <div class="well">
         <p id="favImg"> 
-            <img src="<%=animal.Photo%>"<% alt="no img" %>> 
+            <img id="favPetImg" src="<%=animal.Photo%>"<% alt="no img" %>> 
         </p> 
         <p class="information">
             Name: <%= animal.PetName %> <br> 
@@ -16,10 +16,10 @@
         </p>   
  
         <form method="POST" action="/favorites/<%=animal.id%>/?_method=PUT">
-            <label for="comment">WRITE A NOTE</label>
+            <label id="note" for="comment">WRITE A NOTE</label>
             <textarea id="comment" type="text" name="comment" > I Love this Pet</textarea>
             <br>
-            <button class="btn-primary" id="button" type="submit">Submit</button>
+            <button class="btn-primary" id="commentSubmit" type="submit">Submit</button>
             <a id="seeComments" href="/comments/<%=animal.id%>"> See note</a>
         </form>
 <!--         

@@ -3,12 +3,13 @@ const db = require('../models');
 const router = express.Router();
 const axios = require('axios'); 
 const isLoggedIn = require('../middleware/isLoggedIn')
-const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsak1WdWFCb1JNdlowTG1jY0xac2RrMDdmcVRTWE5OTXNUWG9NVUpJMkJHSmhuMEpHYiIsImp0aSI6IjMyYzM1ODYxNWY2MDE1MzQzZjA4NTIzMDNkMzQwNDAwMjVjNmNhZjNmZTBiNjQyMTgwMGQ2ODNiMDJlNmRhOWM1ZjU5YTk3MmYwNGRhYzQyIiwiaWF0IjoxNjA2MDE2MzYxLCJuYmYiOjE2MDYwMTYzNjEsImV4cCI6MTYwNjAxOTk2MSwic3ViIjoiIiwic2NvcGVzIjpbXX0.hOponHCoZ9xBTDqcyBdBkIEPhpVFlzPdApRKDCSVF6Zy7NWNfpgj3SiZFDfbknbFcWDvTW5gVTcC6uwoFlhh5L2Fh9Y_FcoveA14OS4HOMW-CYHucbWZzY1bd0rAv1fJIKYHbJkQ8QQTv1e9aeTXd51QQcfq5rMafXisKpA6fvtD69MuTcVCXHd68zqgBGe3YcJ3B7m2b3SKF5x0J5Q7jEpxtyV5lC1p2wJAsIT_lCuIfsQ2DwAVYo4zmCRWyIAXe_bZUGcD5_OArVbyBZA1qKL5SFGhNoEHqP92X2zbOj4Qc-4J4T4gA25PLX1hp8JxKnjc-wI9MtFx0lJX9YzR_g";
+const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsak1WdWFCb1JNdlowTG1jY0xac2RrMDdmcVRTWE5OTXNUWG9NVUpJMkJHSmhuMEpHYiIsImp0aSI6IjJkMGJiYTI5NDFjZGU0NjBiNmJlZjFmZDgyYTZiMzI5Yjc4ZmM4NTYyMDBmNzZiMWI0MjRmY2ZjNTEyYjY5MTU5YzFjYTM5YWRmYzNhNmJiIiwiaWF0IjoxNjA2MTU4NDE4LCJuYmYiOjE2MDYxNTg0MTgsImV4cCI6MTYwNjE2MjAxOCwic3ViIjoiIiwic2NvcGVzIjpbXX0.KpOQWlvsOZqpfyaM6IwlUpEPdYDAvp0O84QQ97ldXr0MbV7_BR_83W4utIAEt1XtxPyHcnvGuQDIyrd67wi9jUDHk4M7sSrv5jWSVm2R-QAhlUA7vL0m1sdvPKE-XrUlkENLTlZnXR97IbmqoIs_oEeQ7SHIuBZ4WfoanUw7swULPWPDl865qxKq3k1rfBk2VMnGAzOEWA9_ymBuNJC2nYX1z3I9M4pl33JJQgKdzE7mMqYwwEirMyoVDv6s06BYBgXULFov5D0P8rfvbvHJ41w4Q-jtHgjduyeMH5vr5xvMuBCdfH32KpMFT0gmB3MciW_ltcgYoB93vavCBOHVbw";
 
 
 
 router.get('/', isLoggedIn, function(req, res) {
-    axios.get('https://api.petfinder.com/v2/animals?type=cat&limit=100&location=02180',{
+    let zipFilter= req.query.zipFilter || '02180'
+    axios.get(`https://api.petfinder.com/v2/animals?type=cat&limit=100&location=${zipFilter}`,{
         headers: {
             Authorization: 'Bearer ' + token
         }

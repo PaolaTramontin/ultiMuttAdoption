@@ -913,7 +913,8 @@ a{
 
 #animalPageBackgroundPic{
   background-image: url('https://www.itl.cat/pngfile/big/187-1876859_light-gradient-background-gradient-background-light-gradient-hd.jpg');
-
+    width:100%vw;
+  height:100%vh;
 }
 
 #dogContainer{
@@ -924,13 +925,22 @@ a{
   /* border: 3px solid red; */
 }
 
+.dog{
+  /* border: 3px solid red; */
+  height:30%;
+}
+
 #dogText{
   /* border:2px solid green; */
   height:22%;
   background-color: rgba(238, 237, 238, 0.434);
   color:black;
-  font-size:1.3vw;
+  font-size:2.3vw;
+}
 
+#animalImg{
+  height:80%;
+  width:80%;
 }
 
 .well{

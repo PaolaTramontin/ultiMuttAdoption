@@ -911,10 +911,10 @@ a{
   align-self: center;
 }
 
-/* #animalPageBackgroundPic{
-  background-image: url('https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-
-} */
+#animalPageBackgroundPic{
+  /* background-image: url('https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'); */
+  background-color: transparent;
+}
 
 
 
@@ -996,11 +996,12 @@ font-size:1.1vw;
   padding-top:0%;
 }
 
-/* #catPageBackgroundPic{
-  background-image: url('https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+#catPageBackgroundPic{
+  /* background-image: url('https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
   width:100%vw;
-  height:100%vh;
-  } */
+  height:100%vh; */
+  background-color: transparent;
+  }
 
 .cat{
   align-items: center;

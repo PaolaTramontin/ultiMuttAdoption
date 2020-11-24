@@ -38,6 +38,12 @@ header{
 
                   /* CSS FOR /ANIMALS PAGE */
 
+
+
+ #resultsZip{
+   text-align: center;
+   font-family: 'Architects Daughter';
+ }
 /* divs for /animals page */
 .dog{
   align-items: center;
@@ -903,11 +909,26 @@ a{
   align-self: center;
 }
 
-#animalPageBackgroundPic{
-  background-image: url('https://www.itl.cat/pngfile/big/187-1876859_light-gradient-background-gradient-background-light-gradient-hd.jpg');
-  width:100%vw;
-  height:100%vh;
-}
+ #animalPageBackgroundPic{
+  background-image: url('https://cdn.pixabay.com/photo/2018/05/22/03/25/dog-3420382__340.jpg');
+  background-repeat: no-repeat;
+  background-color:black;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  display:flex;
+  width:100vw;
+  color:white;
+
+} 
+
+/* .animalPageBody{
+  background-image: url('https://cdn.pixabay.com/photo/2018/05/22/03/25/dog-3420382__340.jpg');
+  border:3px solid red;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-attachment: fixed;
+ background-size: 100% 100%;
+} */
 
 #dogContainer{
   display:flex;
@@ -920,7 +941,7 @@ a{
 
 .dog{
   /* border: 3px solid red; */
-  height:35%;
+  height:50vw;
   width:33%;
 }
 
@@ -932,9 +953,22 @@ a{
   font-size:2.3vw;
 }
 
+#buttonHeart{
+  height:4vw;
+  width:60%;
+  font-size:2vw;
+}
+
 #animalImg{
-  height:80%;
-  width:80%;
+  width:  24.5vw;
+  height: 32.5vw;
+  object-fit: cover;
+  border-radius:30%;
+  border: .1vw solid white;
+  align-self: center;
+  position: relative; /* or absolute */
+  top: 80%;
+  left: 0%;
 }
 
 .well{

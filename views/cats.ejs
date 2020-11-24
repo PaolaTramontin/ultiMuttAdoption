@@ -15,7 +15,13 @@
                      <p>
                         <img id="catImg" src="<%=c.primary_photo_cropped.medium%>"<% alt="no img" %> width="300"> 
                      </p>
-                <% } %> 
+                     <% }  else {%> 
+                    
+                        <p>
+                           <img id="catlImg" src="https://cdn.shopify.com/s/files/1/0642/2007/products/cake-photo-coming-soon_grande.png?v=1603897276"/> 
+                        </p>
+          <% } %>
+
                 <form method="POST" action="/favorites">
                     <input hidden type="text" name="name" value="<%= c.name %>">
                     <input hidden type="text" name="id" value="<%= c.id %>">

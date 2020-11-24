@@ -1,4 +1,5 @@
-<h5 id="resultsZip"> Matches Based on your <%=zipFilter%> </h5> 
+<div class="animalPageBody"> 
+<h5 id="resultsZip"> Available Matches Near: <%=zipFilter%> </h5> 
 <div id="animalPageBackgroundPic"> 
     <!-- <h3 id="animalPageHeader"> All Available Furry Friends</h3> -->
     <!-- <a id="favLink" href="/favorites"> Click Here To See Your Favorites</a> -->
@@ -8,7 +9,7 @@
             <div class="dog">
                 <!-- <hr /> -->
                 <div id="dogText"> 
-                    <p> <b>Animal Type: </b><%=a.type%></p>
+                    <!-- <p> <b>Animal Type: </b><%=a.type%></p> -->
                     <p> <b>Furry Friend's Name: </b><%=a.name%></p>
                     <p> <b>Gender: </b><%=a.gender%> </p>
                     <p> <b>Breed: </b><%=a.breeds.primary%></p>
@@ -17,8 +18,13 @@
                      <p>
                         <img id="animalImg" src="<%=a.primary_photo_cropped.medium%>"<% alt="no img" %>/> 
                      </p>
-            
-                <% } %> 
+                     <% }  else {%> 
+                    
+                         <p>
+                            <img id="animalImg" src="https://cdn.shopify.com/s/files/1/0642/2007/products/cake-photo-coming-soon_grande.png?v=1603897276"/> 
+                         </p>
+           <% } %>
+               
                 <form method="POST" action="/favorites">
                     <input hidden type="text" name="name" value="<%= a.name %>">
                     <input hidden type="text" name="id" value="<%= a.id %>">
@@ -35,3 +41,4 @@
             <% }) %>
     </div>           
 </div>
+</body>

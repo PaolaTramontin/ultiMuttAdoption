@@ -921,14 +921,14 @@ a{
 
 } 
 
-/* .animalPageBody{
+.animalPageBody{
   background-image: url('https://cdn.pixabay.com/photo/2018/05/22/03/25/dog-3420382__340.jpg');
-  border:3px solid red;
- background-repeat: no-repeat;
- background-position: center;
- background-attachment: fixed;
- background-size: 100% 100%;
-} */
+  top:5vw; bottom: 0px;
+    height: 100%;
+    background-repeat: repeat;
+    position: absolute;
+    overflow-x: scroll;
+}
 
 #dogContainer{
   display:flex;

@@ -2,10 +2,10 @@
 <div id="catPageBackgroundPic"> 
     <!-- <h3 id="animalPageHeader"> All Available Furry Friends</h3> -->
     <!-- <a id="favLink" href="/favorites"> Click Here To See Your Favorites</a> -->
-    <div id="catContainer"> 
+    <div id="dogContainer"> 
         <% allCats.animals.forEach(c=>{ %>
-            <div class="cat">
-                <div id="catText"> 
+            <div class="dog">
+                <div id="dogText"> 
                     <p> <b>Animal Type: </b><%=c.type%></p>
                     <p> <b>Furry Friend's Name: </b><%=c.name%></p>
                     <p> <b>Gender: </b><%=c.gender%></p>
@@ -13,12 +13,12 @@
                 </div>
                 <%if(c.primary_photo_cropped){ %>
                      <p>
-                        <img id="catImg" src="<%=c.primary_photo_cropped.medium%>"<% alt="no img" %> width="300"> 
+                        <img id="animalImg" src="<%=c.primary_photo_cropped.medium%>"<% alt="no img" %> width="300"> 
                      </p>
                      <% }  else {%> 
                     
                         <p>
-                           <img id="catlImg" src="https://cdn.shopify.com/s/files/1/0642/2007/products/cake-photo-coming-soon_grande.png?v=1603897276"/> 
+                           <img id="animalImg" src="https://cdn.shopify.com/s/files/1/0642/2007/products/cake-photo-coming-soon_grande.png?v=1603897276"/> 
                         </p>
           <% } %>
 

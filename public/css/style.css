@@ -940,14 +940,14 @@ a{
 }
 
 .dog{
-  /* border: 3px solid red; */
-  height:50vw;
+  border: .3vw dotted white;
+  height:70vw;
   width:33%;
 }
 
 #dogText{
   /* border:2px solid green; */
-  height:22%;
+  height:15vw;
   background-color: rgba(238, 237, 238, 0.434);
   color:black;
   font-size:2.3vw;
@@ -961,9 +961,9 @@ a{
 
 #animalImg{
   width:  24.5vw;
-  height: 32.5vw;
+  height: 40.5vw;
   object-fit: cover;
-  border-radius:30%;
+  border-radius:0%;
   border: .1vw solid white;
   align-self: center;
   position: relative; /* or absolute */

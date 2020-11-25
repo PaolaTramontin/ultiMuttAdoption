@@ -8,7 +8,7 @@ const passport = require('./config/ppConfig.js')
 const flash = require('connect-flash')
 const isLoggedIn = require('./middleware/isLoggedIn')
 const methodOverride = require('method-override')
-const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsak1WdWFCb1JNdlowTG1jY0xac2RrMDdmcVRTWE5OTXNUWG9NVUpJMkJHSmhuMEpHYiIsImp0aSI6IjFlMTQ3ZDUyZjU3NDIyN2Y2YTVmYTUyZjFjMzIzODQ5MWQ1NDFkZDQyZjc5ZmY3ZTM2NzZlZDU4Zjc3ODIyMmY1NWM3MWJkMWViNDcyMzY1IiwiaWF0IjoxNjA2MzM4ODg3LCJuYmYiOjE2MDYzMzg4ODcsImV4cCI6MTYwNjM0MjQ4Nywic3ViIjoiIiwic2NvcGVzIjpbXX0.Dk8d_SQpMW19w-r-9xq-_OT2gx3u733U_sdiQzE1HWgXg-D2xU2hS48SXc4R7kZCbi68-enAKMU2kSo_0oeNpUokFCLP1nVsx0hZf5y4Vz9e6ex7kWtlDpXPmcvUYoZbl3U6tVAXjPSnGNPfLjJ1rq7OrF4PKL1Bt-S-3ydK64OiLCF43Wt8Z8I3399yJj3SoiyRWBiNg-ejABZAn17PwIen6Z8Fl3btprP00rYZsdCYEWYipsultTKKDmUXkesJqv4CMp3RSY1niUiRGNttgnWxL_p8fL1j9jZxFbWsCcJzWPLSG1wgRkBtJb3gaEZHmpDjfOkrtqhgyQiXOGg59g";
+const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsak1WdWFCb1JNdlowTG1jY0xac2RrMDdmcVRTWE5OTXNUWG9NVUpJMkJHSmhuMEpHYiIsImp0aSI6IjEwYTc5NjFiY2IxMzVlOWRjZjVjMmM1OTA5NmMxNmI3MWEyNWM3N2M0YmZiZWY5OTU5NjU3ZGY1ZjlhMDA4Nzk1MDE4YzA4NWE5ZDE0ZjRkIiwiaWF0IjoxNjA2MzQ2NDYzLCJuYmYiOjE2MDYzNDY0NjMsImV4cCI6MTYwNjM1MDA2Mywic3ViIjoiIiwic2NvcGVzIjpbXX0.knqkotjvUx2Rr-FoLOe9BLwEfkLFH8_WZczvIWgxkyUzNQmlETwRGwtRCkqhNPbBsbZLMJGyMks_p9QwDj-379cRoTupn7qsftIQVky9LX8xk7h1AMKEWG5M_Whs7Hd3TT1Gs1V9PshYJ0uv02SaV68iHvJo7PVG_SraU16rKRavBhourHFRtw5ub-28_bt7OO_TYIL280ArmKPsVZTs4RRp-JIhlnECmvHiayy7TL0bKoLtYHZ16-hf_VRShygJ6mYFML1H3hdDCGdlSYJy8MBacoPG-Fmhr-JxiM87BE5kl0V3x3-2LdNyW4ZjX_13OAmo_sqEG1hizVDEIPUBzA";
 
 //setup ejs and ejs layouts
 app.set('view engine', 'ejs')
@@ -57,6 +57,7 @@ app.use('/animals', isLoggedIn, require('./controllers/animals'));
 app.use('/favorites',isLoggedIn, require('./controllers/favorites'));
 app.use('/comments',isLoggedIn, require('./controllers/comments'))
 app.use('/cats',isLoggedIn, require('./controllers/cats'))
+app.use('/zip',isLoggedIn, require('./controllers/zip'))
 
 
 //CSS middleware:

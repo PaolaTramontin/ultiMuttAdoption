@@ -1,0 +1,53 @@
+
+    <div id= "zipCat"> 
+        <form method="GET" action="/animals"> 
+            <label id="ZipFormText1" for="nameFilter"> For a Custom Search, please write Zip Code Below: </label> 
+            <input id="ZipFormTextArea1" type="text" placeholder="Search.." id="zipilter" name="zipFilter">    
+            <button id="ZipFormSearchButton1" type="submit" value="search"> <i class="fa fa-search"> </i></button>
+        </form>
+        </div>
+
+<div class="animalPageBody"> 
+<div id="animalPageBackgroundPic"> 
+    
+    <!-- <h3 id="animalPageHeader"> All Available Furry Friends</h3> -->
+    <!-- <a id="favLink" href="/favorites"> Click Here To See Your Favorites</a> -->
+    <div id="dogContainer"> 
+        <!-- <hr/> -->
+        <% allPets.animals.forEach(a=>{ %>
+            <div class="dog">
+                <!-- <hr /> -->
+                <div id="dogText"> 
+                    <!-- <p> <b>Animal Type: </b><%=a.type%></p> -->
+                    <p> <b>Furry Friend's Name: </b><%=a.name%></p>
+                    <p> <b>Gender: </b><%=a.gender%> </p>
+                    <p> <b>Breed: </b><%=a.breeds.primary%></p>
+                </div>
+                <%if(a.primary_photo_cropped){ %>
+                     <p>
+                        <img id="animalImg" src="<%=a.primary_photo_cropped.medium%>"<% alt="no img" %>/> 
+                     </p>
+                     <% }  else {%> 
+                    
+                         <p>
+                            <img id="animalImg" src="https://cdn.shopify.com/s/files/1/0642/2007/products/cake-photo-coming-soon_grande.png?v=1603897276"/> 
+                         </p>
+           <% } %>
+               
+                <form method="POST" action="/favorites">
+                    <input hidden type="text" name="name" value="<%= a.name %>">
+                    <input hidden type="text" name="id" value="<%= a.id %>">
+                    <input hidden type="text" name="contact" value="<%= a.contact.email%>">
+                    <input hidden type="text" name="status" value="<%= a.status%>">
+                    <input hidden type="text" name="description" value="<%= a.description%>">
+                    <input hidden type="text" name="location" value="<%= a.contact.address.city%>">
+                    <%if(a.primary_photo_cropped){ %> 
+                        <input hidden type="text" name="photo" value="<%= a.primary_photo_cropped.small%>">  <% } %>
+                        <!-- <input hidden type="text" name="photo" value="no photo">      -->
+                    <button class="btn btn-primary" id="buttonHeart" type="submit">Heart This Pet</button>
+                </form>
+            </div>
+            <% }) %>
+    </div>           
+</div>
+</body>

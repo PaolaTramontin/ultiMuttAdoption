@@ -52,7 +52,12 @@ header{
  #resultsZip{
    text-align: center;
    font-family: 'Architects Daughter';
+   background-color:white;
+   color:black;
  }
+
+
+ 
 /* divs for /animals page */
 .dog{
   align-items: center;
@@ -232,6 +237,68 @@ header{
   top: 30%;
   left: 40%;
 }
+
+#zipCat{
+  top:0%;
+  color:black;
+  background-color:white;
+  width:100%;
+  left:30vw;
+  text-align:center;
+
+}
+
+
+
+
+
+#ZipFormText1{
+  font-size:1vw;
+  font-family: 'Architects Daughter';
+}
+
+#ZipFormTextArea1{
+  width: 10%;
+  padding: 5px;
+  padding-right: 40px;
+  outline: none;
+  border: .15vw solid #818181;
+  border-radius: 5px;
+  background-color: #FBFBFB;
+  font-family: Cambria, Cochin, Georgia, serif;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+
+#ZipFormTextArea1:focus {
+  border: .15vw solid rgb(23, 67, 209);
+}
+
+
+#ZipFormSearchButton1{
+  background-color: #4c74af;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-decoration: none;
+  height:30%;
+  /* margin: 4px 2px; */
+  margin: auto;
+  cursor: pointer;
+  align-self: center;
+}
+
+
+
+
+
+
 
 
 /*  CODE BELOW is for log in/sign up and forms */

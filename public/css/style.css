@@ -22,6 +22,15 @@ body{  /* INFO ABOUT THE BODY & BACKGROUND IMG */
     
 }
 
+#logoPic{
+  height:35vw;
+  width:35vw;
+  top: -5%;
+  left: 0%;
+  position: absolute;
+}
+
+
 
 
 /* this has the white line on top of the page */
@@ -787,6 +796,13 @@ span:nth-child(18) {
   font-size:110%;
 }
 
+#logoPic{
+  height:45vw;
+  width:55vw;
+  top: 0%;
+  left: 25%;
+  position: absolute;
+}
 
 header{
   background-color:white;
